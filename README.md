@@ -477,15 +477,3 @@ npm start
 <p align="justify">
   The Node.js backend utilizes Web3.js to establish a connection with the Ethereum blockchain, enabling the execution of various operations such as deploying and interacting with smart contracts, sending transactions, and retrieving data from the blockchain. This functionality is crucial for managing and tracking the supply chain data stored on the Ethereum network. Additionally, the Node.js backend handles user authentication and authorization processes. By leveraging the Ethereum stakeholder addresses as digital identities, the backend can verify and grant access to authenticated stakeholders, ensuring the security and integrity of the supply chain management system.
 </p>
-
-## Additional Documentation
-
-- Solidity: https://docs.soliditylang.org/en/v0.8.4/
-- React: https://reactjs.org/docs/getting-started.html
-- Truffle: https://www.trufflesuite.com/docs/truffle/reference/configuration
-- Ganache-CLI: https://www.trufflesuite.com/docs/ganache/overview
-
-## Authors
-
-- Ramachandra Anirudh Vemulapalli - [Github](https://github.com/aniru-dh21) | [Website](https://ramachandra-anirudh-vemulapalli.vercel.app/)
-- Bhargava Rao - [Github](https://github.com/BhargavaRaoPallala)
