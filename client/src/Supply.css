@@ -1,0 +1,236 @@
+/* Supply.css */
+
+.supply-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .supply-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .current-account {
+    font-size: 0.9rem;
+    color: #5a6a7a;
+    background-color: #f0f4f8;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    word-break: break-all;
+  }
+  
+  .current-account b {
+    color: #2c3e50;
+  }
+  
+  .supply-flow {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #3498db;
+  }
+  
+  .supply-flow h6 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .supply-flow p {
+    color: #5a6a7a;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .supply-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .supply-table th {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .supply-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .supply-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .supply-table tr:hover {
+    background-color: #e8f4fc;
+  }
+  
+  .stage-badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .step-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #6c757d;
+    transition: all 0.3s ease;
+  }
+  
+  .step-section:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .step-section h5 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .step-section h5 b {
+    color: #3498db;
+  }
+  
+  .step-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .step-form input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .step-form input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  .btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-success {
+    background-color: transparent;
+    color: #28a745;
+    border: 1px solid #28a745;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  .btn-outline-danger {
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(52, 152, 219, 0), rgba(52, 152, 219, 0.75), rgba(52, 152, 219, 0));
+    margin: 1.5rem 0;
+  }
+  
+  .wait {
+    text-align: center;
+    margin: 2rem;
+    color: #3498db;
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .supply-container {
+      padding: 1rem;
+      margin: 1rem;
+    }
+    
+    .supply-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .current-account {
+      margin-top: 1rem;
+    }
+    
+    .step-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .step-form input {
+      width: 100%;
+      min-width: auto;
+    }
+    
+    .supply-table {
+      font-size: 0.8rem;
+    }
+    
+    .supply-table th, 
+    .supply-table td {
+      padding: 0.5rem;
+    }
+  }
