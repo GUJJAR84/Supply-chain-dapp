@@ -1,0 +1,180 @@
+/* Home.css */
+
+.home-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.8s ease-out;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Background image styling */
+  body {
+    background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Overlay for better readability */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .home-container h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+  
+  .home-container h5 {
+    color: #34495e;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .home-container h5:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .home-container h6 {
+    color: #5a6a7a;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+    font-style: italic;
+  }
+  
+  .home-container button {
+    margin: 0.5rem 0 1.5rem;
+    padding: 0.6rem 1.5rem;
+    border: 2px solid #3498db;
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .home-container button:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  .home-container button:active {
+    transform: translateY(0);
+  }
+  
+  .home-container hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(52, 152, 219, 0), rgba(52, 152, 219, 0.75), rgba(52, 152, 219, 0));
+    margin: 2rem 0;
+  }
+  
+  .step-container {
+    background-color: rgba(248, 249, 250, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(2px);
+  }
+  
+  .step-container:hover {
+    transform: translateX(5px);
+    background-color: rgba(248, 249, 250, 0.9);
+  }
+  
+  .step-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  
+  .track-section {
+    background-color: rgba(232, 244, 252, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    animation: pulse 2s infinite;
+    backdrop-filter: blur(2px);
+  }
+  
+  .track-section:hover {
+    background-color: rgba(232, 244, 252, 0.9);
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.2); }
+    70% { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 1.5rem;
+      margin: 1rem;
+      backdrop-filter: blur(3px);
+    }
+    
+    .home-container h3 {
+      font-size: 1.5rem;
+    }
+    
+    .home-container h5 {
+      font-size: 1.1rem;
+    }
+  }
