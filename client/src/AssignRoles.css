@@ -1,0 +1,196 @@
+/* AssignRoles.css */
+
+/* Main container styling */
+.assign-roles-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 0.8s ease-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Header section */
+  .assign-roles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .current-account {
+    font-size: 0.9rem;
+    color: #5a6a7a;
+    background-color: #f0f4f8;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    word-break: break-all;
+  }
+  
+  .current-account b {
+    color: #2c3e50;
+  }
+  
+  /* Section styling */
+  .role-section {
+    margin-bottom: 3rem;
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .role-section h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+  }
+  
+  /* Form styling */
+  .role-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    align-items: center;
+  }
+  
+  .role-form input {
+    padding: 0.6rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .role-form input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-success {
+    background-color: transparent;
+    color: #28a745;
+    border: 1px solid #28a745;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-outline-danger {
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Table styling */
+  .role-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .role-table th {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  .role-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .role-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .role-table tr:hover {
+    background-color: #e8f4fc;
+  }
+  
+  /* Loading animation */
+  .wait {
+    text-align: center;
+    margin: 2rem;
+    color: #3498db;
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .assign-roles-container {
+      padding: 1rem;
+      margin: 1rem;
+    }
+    
+    .role-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .role-form input {
+      width: 100%;
+      min-width: auto;
+    }
+    
+    .role-table {
+      font-size: 0.8rem;
+    }
+    
+    .role-table th, 
+    .role-table td {
+      padding: 0.5rem;
+    }
+  }
